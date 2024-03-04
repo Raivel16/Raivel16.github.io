@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina Prueba</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-        <header class="header-nav">
-          <nav class="nav">
-            <div class="div-log-nav">
-              <img class="logo-nav" src="imagenes/logo.png"/>
-              <p class="name-logo-nav">Lobito.com</p>
-            </div>
-            <ul class="ul-nav">
-              <li class="li-nav"><a href="#home">Inicio</a></li>
-              <li class="li-nav"><atutorials">Tutoriales</a></li>
-              <li class="li-nav"><a href="#courses">Cursos</l></li>
-              <li class="li-nav"><a="#bootcamps">Bootcam</a></li>
-              <li class="li-nav"><a href="#contact">Contacto</a></li>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Search</title>
+        <link rel="stylesheet" href="css\search.css" />
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="image_search.html">Images</a></li>
+                <li><a href="advanced_search.html">Advance Search</a></li>
             </ul>
-          </nav>
-        </header>
-      </body>
-    </header>
-  <script src="js/main.js"></script>
+        </nav>
+        <form action="https://google.com/search" id="form-search">
+            <div class="logo-container">
+                <img src="images\google_Logo.png" alt="Google Logo" />
+            </div>
+            <input id="input-search" autocomplete="off" type="search" name="q" value="" />
+            <div class="btns">
+                <input form="form-search" formaction="https://google.com/search" class="btn-form" type="submit" value="Google Search" />
+                <button form="form-search" formaction="https://google.com/search" name="btnI" class="btn-form">I’m Feeling Lucky</button>
+            </div>
+        </form>
+
+    </body>
+
 </html>
