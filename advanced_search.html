@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Advanced Search</title>
+        <link rel="stylesheet" href="css\advanced_search.css" />
+    </head>
+
+    <body>
+        <nav>
+            <a href="index.html"><img alt="Logo-google" src="images\google_logo_color.svg" /></a>
+            <ul>
+                <li><a href="index.html">Google Search</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="header">
+                    <span>Advanced Search</span>
+                </div>
+                <div class="middle grid-container">
+                    <div class="head">Show pages containing...</div>
+                    <div class="head"></div>
+                    <div class="head">To do this in the search box</div>
+                    <div class="grid-item labels">
+                        <label>all these words:</label>
+                        <label>this exact word or phrase:</label>
+                        <label>any of these words:</label>
+                        <label>none of these words:</label>
+                    </div>
+                    <div class="grid-item inputs">
+                        <form action="https://google.com/search" id="form-advanced-search">
+                            <input type="text" name="as_q" autocomplete="off" />
+                            <input type="text" name="as_epq" autocomplete="off" />
+                            <input type="text" name="as_oq" autocomplete="off" />
+                            <input type="text" name="as_eq" autocomplete="off" />
+                            <button form="form-advanced-search" class="btn-advanced-search">
+                                Advanced Search
+                            </button>
+                        </form>
+                    </div>
+                    <div class="grid-item examples">
+                        <label>Enter the important words:<span>Tricolor Mouse Terrier.</span></label>
+                        <label>Enter the exact words in quotes:
+                            <span>"Mouse Terrier".</span></label>
+                        <label>Enter OR between the words you want:
+                            <span>Thumbnail OR Standard.</span></label>
+                        <label>Enter a minus sign just in front of the words you do not want to
+                            appear: <span>-Rodent, -"Jack Russell".</span></label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>

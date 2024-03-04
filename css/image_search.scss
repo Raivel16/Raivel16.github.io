@@ -1,0 +1,20 @@
+@import "search";
+
+form{
+    div.btns{
+        .btn-form{
+            margin-inline:0px;
+        }
+    }
+
+    div.logo-container{
+        position: relative;
+
+        .text-logo-image-search{
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            color: #4487f6;
+        }
+    }
+}
