@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Fuente-comida'; /* Nombre de la fuente */
+    src: url('./FoodDelight/FoodDelight.ttf') format('ttf'), /* Ruta a tu fuente en formato WOFF2 */
+         url('./FoodDelight/FoodDelight.otf') format('otf'); /* Ruta a tu fuente en formato WOFF */
+    /* Puedes agregar otras fuentes aquí para diferentes formatos si es necesario */
+}
+
+:root{
+    --naranja: #993B17;
+    --amarillo-fondo: #F3E9D0;
+    --verde: #bfcf18;
+    --verde-hover: #acb919;
+    --verde-claro:hsl(46, 71%, 74%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--amarillo-fondo);
+}
+
+
+.material-symbols-outlined {
+    transition: all 0.5s;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo{
+    width: 230px;
+}
+
+.nav-header .menu-nav ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+}
+
+.nav-header .menu-nav ul li{
+    margin-inline: 5px;
+}
+
+.nav-header .menu-nav ul li a{
+    text-decoration: none;
+    color: var(--naranja);
+    font-family:  "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-header .menu-nav ul li a.active{
+    text-decoration: underline;
+}
+
+.buscador-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding: 0 5px;
+}
+.buscador-container .buscador{
+    display: flex;
+    box-shadow: 0 0 10px gray;
+    border-radius: 8px;
+}
+
+.buscador-container .buscador input[type="text"]{ 
+    width: 70%;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: var(--verde-claro);
+    border: 2px solid var(--verde);
+    border-right: none;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 17px;
+}
+.buscador-container .buscador input[type="submit"]{ 
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid var(--verde);
+    background-color:var(--verde);
+    font-size: 17px;
+    border-radius: 0 8px 8px 0;
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+.buscador-container .buscador input[type="submit"]:hover{
+    background-color: var(--verde-hover);
+    cursor: pointer;
+}
+
+.body-container{
+    display: flex;
+}
+
+aside{
+    background-color: var(--verde-claro);
+    width: 25%;
+    float: left;
+    margin-left: 30px;
+    height: calc(100vh - 60px); /* Para que el aside no salga del body */
+    border-top: 20px solid var(--verde);
+    border-radius: 10px 30px 30px 10px;
+    box-shadow: 10px 0 10px gray;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+aside .arrow-open{
+    display: none;
+}
+
+aside h2{
+    font-family: 'Fuente-comida', sans-serif;
+    color: var(--naranja);
+    margin-bottom: 20px;
+}
+
+aside .filtros h3{
+    font-family: 'Fuente-comida', sans-serif;
+    margin-bottom: 10px;
+}
+
+.cards-container{
+    width: 76%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-item{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--naranja);
+    width: 270px;
+    height: 270px;
+    margin: 5px 10px;
+    margin-bottom: 80px;
+    border-radius: 15px;
+
+    box-shadow: 0 0 30px 5px gray;
+    padding-top: 110px;
+}
+
+.card-item .plato-img{
+    position: absolute;
+    box-sizing: border-box;
+    width: 160px;
+    height: 160px;
+    top:-50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-item .plato-img img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.card-item .plato-img img:hover{
+    scale:  1.1;
+}
+
+.card-item h3{
+    font-size: 22px;
+    margin-top: 15px;
+    color: var(--verde-claro);
+    font-family: 'Fuente-comida', sans-serif;
+}
+
+.card-item .precio::before{
+    content: "S/";
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-item .precio{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.card-item .detalles-enlace{
+    text-decoration:underline;
+    font-size: 16px;
+    color: var(--verde-hover);
+    font-family: 'Fuente-comida', sans-serif;
+    font-weight: bold;
+}
+
+.card-item .detalles-enlace:hover{
+    color: #999;
+    cursor: pointer;
+}
+
+.card-item .btn-añadir-shoppingcar{
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--verde);
+    border-radius: 5px;
+    padding: 3px;
+    color: var(--naranja);
+    font-weight: bold;
+    font-family: 'Fuente-comida', sans-serif;
+    transition: all 0.5s;
+}
+
+.card-item .btn-añadir-shoppingcar:not(span){
+    font-size: 14px;
+}
+
+.card-item .btn-añadir-shoppingcar:hover{
+    background-color: var(--verde-hover);
+    cursor: pointer;
+}
+
+
+.card-item .btn-añadir-shoppingcar:hover .material-symbols-outlined{
+    margin-right: 8px;
+    transform:translateY(2px) rotateZ(45deg);
+}
+
+@media  screen and (max-width: 1030px){
+    
+    aside{
+        position: absolute;
+        left: -34%;
+    } 
+    aside .arrow-open{
+       
+        display: block;
+        background-color: var(--verde-claro);
+        position: absolute;
+        top: 5px;
+        right: -50px;
+        color: var(--naranja);
+        border-right: 10px solid var(--verde);
+        border-radius: 0 15px 15px 0;
+        padding-left: 15px;
+    }
+    aside .arrow-open span{
+        font-size: 35px;
+    }
+    .cards-container{
+        width: 100%;
+        margin-left: 30px;
+    }
+}
+
