@@ -68,7 +68,7 @@ body {
 .buscador-container{
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 0 5px;
 }
 .buscador-container .buscador{
@@ -105,39 +105,49 @@ body {
     cursor: pointer;
 }
 
-.body-container{
+.filtros {
+
+    padding-inline: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
 }
 
-aside{
-    background-color: var(--verde-claro);
-    width: 25%;
-    float: left;
-    margin-left: 30px;
-    height: calc(100vh - 60px); /* Para que el aside no salga del body */
-    border-top: 20px solid var(--verde);
-    border-radius: 10px 30px 30px 10px;
-    box-shadow: 10px 0 10px gray;
-    padding-top: 20px;
-    padding-left: 50px;
-}
-aside .arrow-open{
-    display: none;
-}
-
-aside h2{
+.filtros label{
     font-family: 'Fuente-comida', sans-serif;
-    color: var(--naranja);
-    margin-bottom: 20px;
 }
 
-aside .filtros h3{
-    font-family: 'Fuente-comida', sans-serif;
+.filtros .filtro{
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
+.filtros .filtro label{
+    margin-right: 5px;
+}
+
+.filtros .filtro > p{
+    margin-inline: 5px;
+}
+
+.filtros .filtro input {
+    margin-right: 5px;
+}
+
+.separador-filtros{
+    margin-inline: 10px;
+    color: var(--naranja);
+}
+
+.separador-filtros  .separador-filtros{
+    margin: 0px;
+}
+
 
 .cards-container{
-    width: 76%;
+    width: 100%;
     float: right;
     display: flex;
     flex-wrap: wrap;
@@ -249,32 +259,5 @@ aside .filtros h3{
 .card-item .btn-añadir-shoppingcar:hover .material-symbols-outlined{
     margin-right: 8px;
     transform:translateY(2px) rotateZ(45deg);
-}
-
-@media  screen and (max-width: 1030px){
-    
-    aside{
-        position: absolute;
-        left: -34%;
-    } 
-    aside .arrow-open{
-       
-        display: block;
-        background-color: var(--verde-claro);
-        position: absolute;
-        top: 5px;
-        right: -50px;
-        color: var(--naranja);
-        border-right: 10px solid var(--verde);
-        border-radius: 0 15px 15px 0;
-        padding-left: 15px;
-    }
-    aside .arrow-open span{
-        font-size: 35px;
-    }
-    .cards-container{
-        width: 100%;
-        margin-left: 30px;
-    }
 }
 

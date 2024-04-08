@@ -17,79 +17,102 @@
           <img class="logo" src="./logo.jpeg" alt="" />
         </div>
         <div class="menu-nav">
-            <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a class="active"  href="/info.html">Ofertas</a></li>
-                <li><a href="/info.html">Nosotros</a></li>
-            </ul>
+          <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a class="active" href="/info.html">Ofertas</a></li>
+            <li><a href="/info.html">Nosotros</a></li>
+          </ul>
         </div>
       </nav>
     </header>
     <div class="buscador-container">
-        <div class="buscador">
-            <input type="text" id="searchInput" placeholder="Buscar producto..." />
-            <input type="submit" value="Buscar">
-        </div>
+      <div class="buscador">
+        <input type="text" id="searchInput" placeholder="Buscar producto..." />
+        <input type="submit" value="Buscar" />
+      </div>
     </div>
 
-    <div class="body-container">
+    <div class="filtros">
+      <div class="filtro f-categoria">
+        <span class="separador-filtros separador1 material-symbols-outlined">drag_indicator</span>
+        <label>Categoría</label>
+        <select>
+          <option selected disabled>Selecciona</option>
+          <option value="menus">Menús</option>
+          <option value="desayuno">Desayuno</option>
+          <option value="postre">Postre</option>
+        </select>
+        <span class="separador-filtros separador1 material-symbols-outlined">drag_indicator</span>
+        
+      </div>
+      <div class="filtro f-tipo">
+        <span class="separador-filtros separador1 material-symbols-outlined">drag_indicator</span>
+        <p>Comida</p><input type="checkbox" name="Comida" id="Comida">
+        <p>Bebida</p><input type="checkbox" name="Bebida" id="Bebida">
+      <span class="separador-filtros separador1 material-symbols-outlined">drag_indicator</span>
+        
+      </div>
+      
+      <div class="filtro f-precio">
+        <span class="separador-filtros separador2 material-symbols-outlined">drag_indicator</span>
+        <label>Precio</label>
+        <select>
+          <option selected disabled>Selecciona</option>
+          <option value="0-10">S/ 0-10</option>
+          <option value="10-20">S/ 10-20</option>
+          <option value="20-30">S/ 20-30</option>
+          <option value="mas30">Más de S/ 30</option>
+        </select>
+        <span class="separador-filtros separador1 material-symbols-outlined">drag_indicator</span>
+      </div>
 
-        <aside>
-            <div class="arrow-open"><span class="material-symbols-outlined">chevron_right</span></div>
-            <h2>Filtrar Búsqueda</h2>
-            <div class="filtros">
-                <h3>Categoría:</h3>
-                <h3>Tipo:</h3>
-                <h3>Precio:</h3>
-            </div>
-        </aside>
-            
-                <div class="cards-container">
-                  <div class="card-item">
-                    <div class="plato-img">
-                      <img src="./platos-imgs/plato1.png" alt="" />
-                    </div>
-                    <h3 id="nombre-plato">Lomo Saltado</h3>
-                    <p class="precio">12.00</p>
-                    <a class="detalles-enlace">Detalles</a>
-                    <button class="btn-añadir-shoppingcar">
-                      <span class="material-symbols-outlined"> shopping_cart </span>Añadir
-                    </button>
-                  </div>
-                  <div class="card-item">
-                    <div class="plato-img">
-                      <img src="./platos-imgs/plato2.png" alt="" />
-                    </div>
-                    <h3 id="nombre-plato">Causa</h3>
-                    <p class="precio">8.00</p>
-                    <a class="detalles-enlace">Detalles</a>
-                    <button class="btn-añadir-shoppingcar">
-                      <span class="material-symbols-outlined"> shopping_cart </span>Añadir
-                    </button>
-                  </div>
-                  <div class="card-item">
-                    <div class="plato-img">
-                      <img src="./platos-imgs/plato3.png" alt="" />
-                    </div>
-                    <h3 id="nombre-plato">Ceviche</h3>
-                    <p class="precio">15.00</p>
-                    <a class="detalles-enlace">Detalles</a>
-                    <button class="btn-añadir-shoppingcar">
-                      <span class="material-symbols-outlined"> shopping_cart </span>Añadir
-                    </button>
-                  </div>
-                  <div class="card-item">
-                    <div class="plato-img">
-                      <img src="./platos-imgs/plato4.png" alt="" />
-                    </div>
-                    <h3 id="nombre-plato">Sopa de pescado</h3>
-                    <p class="precio">7.00</p>
-                    <a class="detalles-enlace">Detalles</a>
-                    <button class="btn-añadir-shoppingcar">
-                      <span class="material-symbols-outlined"> shopping_cart </span>Añadir
-                    </button>
-                  </div>
-                </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="card-item">
+        <div class="plato-img">
+          <img src="./platos-imgs/plato1.png" alt="" />
+        </div>
+        <h3 id="nombre-plato">Lomo Saltado</h3>
+        <p class="precio">12.00</p>
+        <a class="detalles-enlace">Detalles</a>
+        <button class="btn-añadir-shoppingcar">
+          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+        </button>
+      </div>
+      <div class="card-item">
+        <div class="plato-img">
+          <img src="./platos-imgs/plato2.png" alt="" />
+        </div>
+        <h3 id="nombre-plato">Causa</h3>
+        <p class="precio">8.00</p>
+        <a class="detalles-enlace">Detalles</a>
+        <button class="btn-añadir-shoppingcar">
+          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+        </button>
+      </div>
+      <div class="card-item">
+        <div class="plato-img">
+          <img src="./platos-imgs/plato3.png" alt="" />
+        </div>
+        <h3 id="nombre-plato">Ceviche</h3>
+        <p class="precio">15.00</p>
+        <a class="detalles-enlace">Detalles</a>
+        <button class="btn-añadir-shoppingcar">
+          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+        </button>
+      </div>
+      <div class="card-item">
+        <div class="plato-img">
+          <img src="./platos-imgs/plato4.png" alt="" />
+        </div>
+        <h3 id="nombre-plato">Sopa de pescado</h3>
+        <p class="precio">7.00</p>
+        <a class="detalles-enlace">Detalles</a>
+        <button class="btn-añadir-shoppingcar">
+          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+        </button>
+      </div>
     </div>
   </body>
 </html>
