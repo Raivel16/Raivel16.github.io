@@ -6,21 +6,17 @@
 }
 
 :root{
-    --naranja: #993B17;
-    --amarillo-fondo: #F3E9D0;
-    --verde: #bfcf18;
-    --verde-hover: #acb919;
-    --verde-claro:hsl(46, 71%, 74%);
-}
+    --naranja: #FF914D;
+    --azul: #3f67d4;
+    --azul-hover: #5279e6;
+    --azul-select: #1d52e4;
+}   
 
 * {
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: var(--amarillo-fondo);
-}
 
 
 .material-symbols-outlined {
@@ -39,6 +35,55 @@ body {
     margin-bottom: 30px;
 }
 
+.btn-iniciar{
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+
+
+.btn-iniciar .btn, .btn-carrito {
+    background-color: var(--azul);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 5px gray;
+}
+
+
+
+
+.btn-carrito{
+    border-radius: 50%;
+    position: fixed;
+    bottom:18px;
+    right: 10px;
+    padding:8px 10px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.btn-carrito:hover .material-symbols-outlined{
+    transform: rotate(-10deg);
+}
+
+
+.btn-iniciar .btn:hover{
+    cursor: pointer;
+    background-color: var(--azul-hover);
+}
+
+.left-logo{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 .logo{
     width: 230px;
 }
@@ -81,8 +126,7 @@ body {
     width: 70%;
     padding: 5px 10px;
     margin: 0;
-    background-color: var(--verde-claro);
-    border: 2px solid var(--verde);
+    border: 2px solid var(--azul);
     border-right: none;
     outline: none;
     border-radius: 8px 0 0 8px;
@@ -92,8 +136,8 @@ body {
     width: fit-content;
     padding: 5px 10px;
     margin: 0;
-    border: 2px solid var(--verde);
-    background-color:var(--verde);
+    border: 2px solid var(--azul);
+    background-color:var(--azul);
     font-size: 17px;
     border-radius: 0 8px 8px 0;
     color: var(--naranja);
@@ -101,7 +145,7 @@ body {
 }
 
 .buscador-container .buscador input[type="submit"]:hover{
-    background-color: var(--verde-hover);
+    background-color: var(--azul-hover);
     cursor: pointer;
 }
 
@@ -134,6 +178,15 @@ body {
 
 .filtros .filtro input {
     margin-right: 5px;
+}
+
+.filtros .filtro select{
+    border-radius: 5px;
+    border: 1px solid var(--azul-select);
+    color: var(--azul-select);
+    box-shadow: 0 0 5px;
+    outline: none;
+    padding: 2px 4px;
 }
 
 .separador-filtros{
@@ -200,13 +253,13 @@ body {
 .card-item h3{
     font-size: 22px;
     margin-top: 15px;
-    color: var(--verde-claro);
+    color: black;
     font-family: 'Fuente-comida', sans-serif;
 }
 
 .card-item .precio::before{
     content: "S/";
-    color: var(--verde);
+    color: var(--azul);
     font-weight: bold;
     font-size: 22px;
 }
@@ -220,24 +273,30 @@ body {
 .card-item .detalles-enlace{
     text-decoration:underline;
     font-size: 16px;
-    color: var(--verde-hover);
+    color: var(--azul);
     font-family: 'Fuente-comida', sans-serif;
     font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    
 }
+
 
 .card-item .detalles-enlace:hover{
-    color: #999;
+    color: var(--azul-hover);
     cursor: pointer;
+    padding-top: 4px;
+    margin-bottom: 16px;
 }
 
+
 .card-item .btn-añadir-shoppingcar{
-    margin-top: 20px;
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: var(--verde);
+    background-color: var(--azul);
     border-radius: 5px;
     padding: 3px;
     color: var(--naranja);
@@ -251,7 +310,7 @@ body {
 }
 
 .card-item .btn-añadir-shoppingcar:hover{
-    background-color: var(--verde-hover);
+    background-color: var(--azul-hover);
     cursor: pointer;
 }
 
