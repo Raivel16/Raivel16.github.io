@@ -12,10 +12,43 @@
   </head>
   <body>
 
-    <button class="btn-carrito"><span class="material-symbols-outlined">shopping_cart_checkout</span></button>
+    <button id="btn-carrito" class="btn-carrito"><span class="material-symbols-outlined">shopping_cart_checkout</span></button>
+    
+    <div class="pedido-container" id="pedido-container">
+      <div class="content">
+        <div class="header-carrito">
+          <h3>Mi Pedido</h3>
+          <span class="material-symbols-outlined" id="btn-close">close</span>
+        </div>
+        
+        <div class="items-list">
+          <div class="item-pedido" data-id="1">
+            <div class="no-item">
+              <h4>1</h4>
+            </div>
+            <img src="./platos-imgs/plato1.png" alt="Lomo Saltado">
+            <div class="info-item">
+              <h5>Lomo Saltado</h5>
+              <p class="precio">12.00</p>
+              <a class="detalles-enlace">Detalles</a>
+            </div>
+            <div class="btns-item">
+              <div class="btns-cant">
+                <button data-id="1" class="btn-cant menos"><span class="material-symbols-outlined btn-cant menos">remove</span></button>
+                <input data-id="1" class="btn-cant-value" type="text" value="1" disabled/>
+                <button data-id="1" class="btn-cant mas"><span class="material-symbols-outlined btn-cant mas">add</span></button>
+              </div>
+              <button data-id="1" title="Eliminar del pedido" class="eliminar"><span class="material-symbols-outlined fig-eliminar">delete</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="btn-iniciar">
       <button class="btn">Iniciar Sesión</button>
     </div>
+
     <header>
       <nav class="nav-header">
         <div class="left-logo">
@@ -75,7 +108,7 @@
     </div>
 
     <div class="cards-container">
-      <div class="card-item">
+      <div class="card-item" data-id="1">
         <div class="plato-img">
           <img src="./platos-imgs/plato1.png" alt="" />
         </div>
@@ -83,10 +116,10 @@
         <p class="precio">12.00</p>
         <a class="detalles-enlace">Detalles</a>
         <button class="btn-añadir-shoppingcar">
-          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+          <span class="material-symbols-outlined fig-carrito"> shopping_cart </span>Añadir
         </button>
       </div>
-      <div class="card-item">
+      <div class="card-item" data-id="2">
         <div class="plato-img">
           <img src="./platos-imgs/plato2.png" alt="" />
         </div>
@@ -94,10 +127,10 @@
         <p class="precio">8.00</p>
         <a class="detalles-enlace">Detalles</a>
         <button class="btn-añadir-shoppingcar">
-          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+          <span class="material-symbols-outlined fig-carrito"> shopping_cart </span>Añadir
         </button>
       </div>
-      <div class="card-item">
+      <div class="card-item" data-id="3">
         <div class="plato-img">
           <img src="./platos-imgs/plato3.png" alt="" />
         </div>
@@ -105,10 +138,10 @@
         <p class="precio">15.00</p>
         <a class="detalles-enlace">Detalles</a>
         <button class="btn-añadir-shoppingcar">
-          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+          <span class="material-symbols-outlined fig-carrito"> shopping_cart </span>Añadir
         </button>
       </div>
-      <div class="card-item">
+      <div class="card-item" data-id="4">
         <div class="plato-img">
           <img src="./platos-imgs/plato4.png" alt="" />
         </div>
@@ -116,10 +149,10 @@
         <p class="precio">7.00</p>
         <a class="detalles-enlace">Detalles</a>
         <button class="btn-añadir-shoppingcar">
-          <span class="material-symbols-outlined"> shopping_cart </span>Añadir
+          <span class="material-symbols-outlined fig-carrito"> shopping_cart </span>Añadir
         </button>
       </div>
     </div>
-  
+  <script src="main.js"></script>
   </body>
 </html>
