@@ -7,7 +7,7 @@ class PedidoItem {
     constructor(id, nombre, precio, cantidad) {
       this.id = id;
       this.nombre = nombre;
-      this.precio = parseFloat(precio); // Convertir el precio a número flotante
+      this.precio = parseFloat(precio).toFixed(2); // Convertir el precio a número flotante
       this.cantidad = parseInt(cantidad); // Convertir la cantidad a número entero
     }
   
