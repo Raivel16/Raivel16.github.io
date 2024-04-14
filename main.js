@@ -2,12 +2,22 @@
 let pedidoItems = [];
 
 
+function ifPEDIDO(){
+    const numItems = document.querySelector(".num-items");
+    if (pedidoItems.length > 0) {
+        numItems.innerHTML = pedidoItems.length;
+        numItems.style.display = "block";
+    } else {
+        numItems.innerHTML = 0;
+        numItems.style.display = "none";
+    }
+}
 
 class PedidoItem {
     constructor(id, nombre, precio, cantidad) {
       this.id = id;
       this.nombre = nombre;
-      this.precio = parseFloat(precio); // Convertir el precio a número flotante
+      this.precio = parseFloat(precio).toFixed(2); // Convertir el precio a número flotante
       this.cantidad = parseInt(cantidad); // Convertir la cantidad a número entero
     }
   
@@ -53,14 +63,14 @@ class PedidoItem {
         contador++;
     });
     itemPedidoElements.innerHTML = contentHTML;
- 
+    ifPEDIDO();
   }
 
 
 
 
 document.addEventListener("DOMContentLoaded", function() {
-
+    ifPEDIDO();
     renderPedidoItem();
 
     

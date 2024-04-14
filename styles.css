@@ -81,6 +81,17 @@
     transform: rotate(-20deg);
 }
 
+.btn-carrito .num-items{
+    display: none;
+    position: absolute;
+    top:-2px;
+    right: 0px;
+    background-color: red;
+    padding: 1px 3px;
+    border-radius: 90%;
+    font-size: 9px;
+}
+
 
 .btn-iniciar .btn:hover{
     cursor: pointer;
